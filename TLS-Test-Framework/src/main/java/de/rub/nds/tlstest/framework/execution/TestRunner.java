@@ -248,7 +248,7 @@ public class TestRunner {
 
         FeatureExtractionResult report =
                 ServerFeatureExtractionResult.fromServerScanReport(scanner.scan());
-        saveToCache(report);
+        // saveToCache(report);
 
         testContext.setFeatureExtractionResult(report);
         LOGGER.debug("TLS-Scanner finished!");
@@ -303,7 +303,7 @@ public class TestRunner {
                         clientScanner.scan(), identifier);
 
         extractionResult.setReceivedClientHello(clientHello);
-        saveToCache(extractionResult);
+        // saveToCache(extractionResult);
         testContext.setReceivedClientHelloMessage(clientHello);
         testContext.setFeatureExtractionResult(extractionResult);
     }
